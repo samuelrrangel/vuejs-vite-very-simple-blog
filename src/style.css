@@ -4,6 +4,13 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .container {
   background-color: #fff;
   border-radius: 10px;

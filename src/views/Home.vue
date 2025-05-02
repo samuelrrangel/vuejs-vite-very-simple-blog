@@ -1,11 +1,29 @@
 <template>
   <div>
     <h1>Meu Blog</h1>
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    <Post 
+      v-for="post in posts" 
+      :key="post.id" 
+      :post="post" 
+    />
   </div>
 </template>
 
-<script setup>
-import { posts } from '../data/posts';
-import PostCard from '../components/PostCard.vue';
+<script>
+import Post from 'src/views/Post.vue'
+
+export default {
+  components: {
+    Post
+  }
+}
 </script>
+
+<style scoped>
+  .post-actions {
+    margin-top: 16px;
+  }
+  button {
+    margin-right: 8px;
+  }
+</style>
